@@ -1,0 +1,21 @@
+html,
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  font-family: sans-serif;
+  max-width: 500px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+.container {
+  margin: 8px;
+  flex: 100px 1 0;
+  max-width: 250px;
+  white-space: nowrap;
+}
