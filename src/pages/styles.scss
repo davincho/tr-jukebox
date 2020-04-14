@@ -19,3 +19,9 @@ body {
   max-width: 250px;
   white-space: nowrap;
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
