@@ -27,6 +27,7 @@ const SoundButton: FC<{
       <motion.div
         className={combine({
           [styles.btn]: true,
+          [styles.btn__playing]: isPlaying,
         })}
         onClick={() => {
           setIsPlaying(true);
