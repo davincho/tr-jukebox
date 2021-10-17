@@ -5,7 +5,7 @@ export default [
     message: 'NEW sounds',
     files: sort([{ name: 'Baiii', file: './sounds/baiii.mp3' }, {
       name: 'Ai jai jaiii',
-      file: './sounds/alrightiiiii.mp3'
+      file: './sounds/ai_jai_jai.mp3'
     }, {
       name: 'Alrightiiii',
       file: './sounds/alrightiiiii.mp3'
