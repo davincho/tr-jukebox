@@ -3,7 +3,13 @@ const sort = (input) => input.sort((a, b) => (a.name < b.name ? -1 : 1));
 export default [
   {
     message: 'NEW sounds',
-    files: sort([{ name: 'Baiii', file: './sounds/baiii.mp3' }]),
+    files: sort([{ name: 'Baiii', file: './sounds/baiii.mp3' }, {
+      name: 'Ai jai jaiii',
+      file: './sounds/alrightiiiii.mp3'
+    }, {
+      name: 'Alrightiiii',
+      file: './sounds/alrightiiiii.mp3'
+    }]),
   },
   {
     message: "<img height='40' src='/niki.png' /> 4 ever ❤️ ",
