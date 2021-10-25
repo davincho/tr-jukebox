@@ -9,6 +9,9 @@ export default [
     }, {
       name: 'Alrightiiii',
       file: './sounds/alrightiiiii.mp3'
+    },, {
+      name: 'Tschüss Baba Servus Pfirti',
+      file: './sounds/tschuss_baba_servus_pfirti.mp3'
     }]),
   },
   {
