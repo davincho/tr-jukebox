@@ -1,0 +1,5 @@
+{
+    "extends": [
+        "./node_modules/@dvnch/eslint-config/react.json"
+    ]
+}

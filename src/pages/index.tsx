@@ -1,30 +1,36 @@
-import React, { useState } from 'react';
+import React from "react";
 
-import sounds from '../../sounds';
+import sounds from "../../sounds";
 
-import SoundButton from './components/SoundButton';
-import Memoriam from './components/Memoriam';
+import JukeBox from "./components/JukeBox";
+import SoundButton from "./components/SoundButton";
 
-function App() {
+const App = () => {
   return (
-    <div className="app">
-      <h1 className="heading">TourRadar Jukebox</h1>
+    <div className="h-screen w-screen">
+      <JukeBox className="fixed top-5 right-0 w-7/12" />
 
-      {sounds.map(({ message, files }) => (
-        <>
-          <Memoriam>{message}</Memoriam>
+      <div className="absolute top-[162px] left-9">
+        <h1 className="text-5xl mb-7 font-bold">TourRadar Jukebox</h1>
+        <div className="grid w-[747px] grid-cols-3 gap-3">
+          {sounds.map((group) => {
+            const label = group.message;
 
-          <div className="buttons">
-            {files.map((file) => (
-              <SoundButton key={file.name} soundName={file.file}>
-                {file.name}
+            return group.files.map(({ name, file }) => (
+              <SoundButton
+                label={label}
+                key={name}
+                soundName={file}
+                image={group.image}
+              >
+                {name}
               </SoundButton>
-            ))}
-          </div>
-        </>
-      ))}
+            ));
+          })}
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

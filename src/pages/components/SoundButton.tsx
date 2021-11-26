@@ -1,48 +1,51 @@
-import { FC, useState } from 'react';
+import React, { FC, useState } from "react";
 
-import Sound from 'react-sound';
+import Sound from "react-sound";
 
-import { motion } from 'framer-motion';
+import niki from "./niki.png";
 
-import styles from './button.module.scss';
-
-const combine = (input) =>
-  Object.keys(input)
-    .reduce((acc, key) => {
-      if (input[key]) {
-        acc.push(key);
-      }
-      return acc;
-    }, [])
-    .join(' ');
+const IMAGE_MAP = {
+  niki,
+};
 
 const SoundButton: FC<{
   soundName: string;
-}> = ({ children, soundName }) => {
+  label: string;
+  image?: string;
+}> = ({ children, soundName, label, image }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [, setIsLoading] = useState(false);
+
+  const resolvedImg = IMAGE_MAP[image];
 
   return (
     <>
-      <motion.div
-        className={combine({
-          [styles.btn]: true,
-          [styles.btn__playing]: isPlaying,
-        })}
+      <button
+        className={`bg-white shadow-grey-8 rounded-3xl p-1 h-[48px] ${
+          isPlaying ? "animate-spin" : ""
+        }`}
         onClick={() => {
           setIsPlaying(true);
         }}
-        whileTap={{ scale: 0.9 }}
       >
-        <div className={styles.content}>{children}</div>
-      </motion.div>
+        <div className="uppercase text-xs h-[15px]">
+          {resolvedImg ? (
+            <img className="inline-block h-full" src={resolvedImg.src} />
+          ) : null}
+          {label}
+        </div>
+        <div>{children}</div>
+      </button>
       <Sound
         url={soundName}
         onLoading={() => setIsLoading(true)}
         onLoad={() => setIsLoading(false)}
         onStop={() => setIsPlaying(false)}
         onError={() => setIsPlaying(false)}
-        onFinishedPlaying={() => setIsPlaying(false)}
+        onFinishedPlaying={() => {
+          setIsPlaying(false);
+          setIsLoading(false);
+        }}
         playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
       />
     </>
