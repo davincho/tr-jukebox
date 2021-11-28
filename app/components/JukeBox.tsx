@@ -6,10 +6,10 @@ import mobileJukeBox from "./mobile-jb.png";
 const Jukebox = () => {
   return (
     <div className="bg-container">
-      <img className="md:hidden" src={mobileJukeBox.src} />
+      <img className="md:hidden" src={mobileJukeBox} />
       <img
         className="absolute right-0 top-3 h-screen hidden md:block"
-        src={jukeBox.src}
+        src={jukeBox}
       />
     </div>
   );

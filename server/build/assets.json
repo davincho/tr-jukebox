@@ -1,0 +1,32 @@
+{
+  "version": "f3367405",
+  "entry": {
+    "module": "/build/entry.client-LWGFJX7R.js",
+    "imports": [
+      "/build/_shared/chunk-EX2DOFZB.js",
+      "/build/_shared/chunk-E7VMOUYL.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-NDMVLBIK.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-YJ2ZIY7O.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-F3367405.js"
+}

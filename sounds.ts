@@ -1,4 +1,10 @@
-const sort = (input) => input.sort((a, b) => (a.name < b.name ? -1 : 1));
+interface File {
+  name: string;
+  file: string;
+}
+
+const sort = (input: File[]) =>
+  input.sort((a, b) => (a.name < b.name ? -1 : 1));
 
 const sounds = [
   {
@@ -91,10 +97,5 @@ const sounds = [
     ]),
   },
 ];
-
-export const list = sounds.reduce((acc, sound) => {
-  acc.push(...sound.files);
-  return acc;
-}, []);
 
 export default sounds;

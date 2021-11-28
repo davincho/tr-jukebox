@@ -12,7 +12,7 @@ Object.keys(elevations).forEach((color) => {
 
 module.exports = {
   mode: "jit",
-  purge: ["src/**/*.tsx"],
+  purge: ["app/**/*.tsx"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {

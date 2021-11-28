@@ -5,33 +5,39 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@remix-run/react": "^1.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.0.6",
+    "@remix-run/serve": "^1.0.6",
+    "@remix-run/vercel": "^1.0.6",
     "autoprefixer": "^10.4.0",
-    "next": "^12.0.4",
     "postcss": "^8.4.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
     "react-sound": "1.2.0",
     "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
+    "@remix-run/dev": "^1.0.6",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.1.2",
     "@dvnch/eslint-config": "^2.0.0",
     "@types/node": "^16.11.10",
-    "@types/react": "^17.0.37",
+    "concurrently": "^6.4.0",
     "eslint": "^8.3.0",
     "prettier": "^2.5.0",
-    "typescript": "^4.5.2"
+    "vercel": "^23.1.2"
   },
   "scripts": {
-    "dev": "next",
-    "css": "npx tailwindcss -i ./css/index.css -o ./src/pages/index.css --minify",
-    "css:dev": "npx tailwindcss -i ./css/index.css -o ./src/pages/index.css --watch",
-    "build": "yarn css && next build",
-    "start": "next start"
+    "postinstall": "remix setup node",
+    "css": "npx tailwindcss -i ./css/index.css -o ./app/styles/index.css --minify",
+    "css:dev": "npx tailwindcss -i ./css/index.css -o ./app/styles/index.css --watch",
+    "build": "yarn css && remix build",
+    "dev": "concurrently \"yarn css:dev\" \"remix dev\"",
+    "start": "vercel dev"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
 }

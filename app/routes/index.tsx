@@ -1,11 +1,10 @@
 import React from "react";
 
 import sounds from "../../sounds";
+import JukeBox from "../components/JukeBox";
+import SoundButton from "../components/SoundButton";
 
-import JukeBox from "./components/JukeBox";
-import SoundButton from "./components/SoundButton";
-
-const App = () => {
+const Index = () => {
   return (
     <div className="h-screen w-screen flex flex-col">
       <JukeBox />
@@ -35,4 +34,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Index;
