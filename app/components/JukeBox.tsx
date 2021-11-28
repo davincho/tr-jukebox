@@ -1,7 +1,5 @@
-import React from "react";
-
-import jukeBox from "./jb.png";
-import mobileJukeBox from "./mobile-jb.png";
+import jukeBox from './jb.png';
+import mobileJukeBox from './mobile-jb.png';
 
 const Jukebox = () => {
   return (

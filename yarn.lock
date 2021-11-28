@@ -30,10 +30,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@dvnch/eslint-config@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@dvnch/eslint-config/-/eslint-config-2.0.0.tgz#73c0489204aac2726211b81267c18b8f30c84b98"
-  integrity sha512-4Uufk4N7zer1lKJsx9W3/kq3P5QdO+i0YTx9dHhcxig9krlERZdhQa5mlC9Sku7gl0+3yj2XauCMVK6JumiXWA==
+"@dvnch/eslint-config@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@dvnch/eslint-config/-/eslint-config-2.0.3.tgz#8dde480962f6751a13f315e91f6a73ca92472675"
+  integrity sha512-Hczs8tBkLHr9iHwMaKTNRabZSp9Np2P2WvY/GVGsFZa9wYa8uPuR6IMRMr18Hu5Zxn6kYxRGyKcoLsz8Jtr7Wg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.4.0"
     "@typescript-eslint/parser" "^5.4.0"
@@ -337,6 +337,13 @@
   version "17.0.11"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
   integrity sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-sound@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@types/react-sound/-/react-sound-1.2.3.tgz#9ce13ed6b553e0027d5657d8f1816f98e0e30ef5"
+  integrity sha512-PfeO57BIvocJe5Gwj/EicTu1XTYuliXBNzz8Uj9qm3LglnqP+X0zb2FUKZUIVISZ8L/e8PrCjciAix2ZsdKhzw==
   dependencies:
     "@types/react" "*"
 

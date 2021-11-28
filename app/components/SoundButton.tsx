@@ -1,28 +1,28 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from 'react';
 
-import Sound from "react-sound";
+import Sound from 'react-sound';
 
-import niki from "./niki.png";
+import niki from './niki.png';
 
 const IMAGE_MAP = {
-  niki,
+  niki
 };
 
 const SoundButton: FC<{
   soundName: string;
   label: string;
-  image?: string;
+  image?: 'niki';
 }> = ({ children, soundName, label, image }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [, setIsLoading] = useState(false);
 
-  const resolvedImg = IMAGE_MAP[image];
+  const resolvedImg = image ? IMAGE_MAP[image] : undefined;
 
   return (
     <>
       <button
         className={`bg-white-100 shadow-grey-8 rounded-3xl p-1 h-[48px] ${
-          isPlaying ? "animate-spin" : ""
+          isPlaying ? 'animate-spin' : ''
         }`}
         onClick={() => {
           setIsPlaying(true);
@@ -30,7 +30,7 @@ const SoundButton: FC<{
       >
         <div className="uppercase text-xs h-[15px]">
           {resolvedImg ? (
-            <img className="inline-block h-full" src={resolvedImg.src} />
+            <img className="inline-block h-full" src={resolvedImg} />
           ) : null}
           {label}
         </div>
@@ -46,7 +46,7 @@ const SoundButton: FC<{
           setIsPlaying(false);
           setIsLoading(false);
         }}
-        playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
+        playStatus={isPlaying ? 'PLAYING' : 'STOPPED'}
       />
     </>
   );

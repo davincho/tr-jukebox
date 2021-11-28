@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Links, LiveReload, Meta, Outlet, Scripts } from "remix";
-import type { LinksFunction } from "remix";
+import { Links, LiveReload, Meta, Outlet, Scripts } from 'remix';
+import type { LinksFunction } from 'remix';
 
-import styles from "./styles/index.css";
+import styles from './styles/index.css';
 
 /**
  * The `links` export is a function that returns an array of objects that map to
@@ -14,7 +14,7 @@ import styles from "./styles/index.css";
  * https://remix.run/api/app#links
  */
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: 'stylesheet', href: styles }];
 };
 
 /**
@@ -43,7 +43,7 @@ const Document = ({ children }: { children: React.ReactNode }) => {
       <body>
         {children}
         <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
   );

@@ -1,14 +1,12 @@
-import React from "react";
+import type { HeadersFunction } from 'remix';
 
-import type { HeadersFunction } from "remix";
-
-import sounds from "../../sounds";
-import JukeBox from "../components/JukeBox";
-import SoundButton from "../components/SoundButton";
+import sounds from '../../sounds';
+import JukeBox from '../components/JukeBox';
+import SoundButton from '../components/SoundButton';
 
 export const headers: HeadersFunction = () => {
   return {
-    "Cache-Control": "s-maxage=1, stale-while-revalidate=59",
+    'Cache-Control': 's-maxage=1, stale-while-revalidate=59'
   };
 };
 
@@ -22,7 +20,7 @@ const Index = () => {
           TourRadar Jukebox
         </h1>
         <div className="grid md:w-[747px] grid-cols-1 md:grid-cols-3 gap-3 md:bg-transparent p-3 bg-teal-10">
-          {sounds.map((group) => {
+          {sounds.map(group => {
             const label = group.message;
 
             return group.files.map(({ name, file }) => (
