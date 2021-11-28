@@ -89,7 +89,8 @@ var root_default = App;
 // route-module:/Users/davincho/code/tr-jukebox/app/routes/index.tsx
 var routes_exports = {};
 __export(routes_exports, {
-  default: () => routes_default
+  default: () => routes_default,
+  headers: () => headers
 });
 var import_react3 = __toModule(require("react"));
 
@@ -185,10 +186,6 @@ var sounds = [
     ])
   }
 ];
-var list = sounds.reduce((acc, sound) => {
-  acc.push(...sound.files);
-  return acc;
-}, []);
 var sounds_default = sounds;
 
 // app/components/JukeBox.tsx
@@ -255,6 +252,11 @@ var SoundButton = ({ children, soundName, label, image }) => {
 var SoundButton_default = SoundButton;
 
 // route-module:/Users/davincho/code/tr-jukebox/app/routes/index.tsx
+var headers = () => {
+  return {
+    "Cache-Control": "s-maxage=1, stale-while-revalidate=59"
+  };
+};
 var Index = () => {
   return /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "h-screen w-screen flex flex-col"

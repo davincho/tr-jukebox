@@ -1,8 +1,16 @@
 import React from "react";
 
+import type { HeadersFunction } from "remix";
+
 import sounds from "../../sounds";
 import JukeBox from "../components/JukeBox";
 import SoundButton from "../components/SoundButton";
+
+export const headers: HeadersFunction = () => {
+  return {
+    "Cache-Control": "s-maxage=1, stale-while-revalidate=59",
+  };
+};
 
 const Index = () => {
   return (

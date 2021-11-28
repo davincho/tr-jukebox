@@ -3,7 +3,7 @@ import * as React from "react";
 import { Links, LiveReload, Meta, Outlet, Scripts } from "remix";
 import type { LinksFunction } from "remix";
 
-import styles from "~/styles/index.css";
+import styles from "./styles/index.css";
 
 /**
  * The `links` export is a function that returns an array of objects that map to
