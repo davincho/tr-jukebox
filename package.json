@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.js",
   "dependencies": {
     "@remix-run/react": "^1.0.6",
     "react": "^17.0.2",
