@@ -21,7 +21,7 @@ const SoundButton: FC<{
   return (
     <>
       <button
-        className={`bg-white shadow-grey-8 rounded-3xl p-1 h-[48px] ${
+        className={`bg-white-100 shadow-grey-8 rounded-3xl p-1 h-[48px] ${
           isPlaying ? "animate-spin" : ""
         }`}
         onClick={() => {

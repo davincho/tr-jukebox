@@ -1,4 +1,4 @@
-const { elevations } = require("./tokens");
+const { elevations, colors } = require("./tokens");
 
 const boxShadow = {};
 
@@ -17,6 +17,11 @@ module.exports = {
   theme: {
     extend: {
       boxShadow,
+    },
+    colors: {
+      ...colors,
+      transparent: "transparent",
+      current: "currentColor",
     },
   },
   variants: {},

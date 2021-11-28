@@ -7,12 +7,14 @@ import SoundButton from "./components/SoundButton";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen">
-      <JukeBox className="fixed top-5 right-0 w-7/12" />
+    <div className="h-screen w-screen flex flex-col">
+      <JukeBox />
 
-      <div className="absolute top-[162px] left-9">
-        <h1 className="text-5xl mb-7 font-bold">TourRadar Jukebox</h1>
-        <div className="grid w-[747px] grid-cols-3 gap-3">
+      <div className="md:absolute top-[162px] md:left-9 overflow-scroll">
+        <h1 className="hidden md:block text-5xl mb-7 font-bold">
+          TourRadar Jukebox
+        </h1>
+        <div className="grid md:w-[747px] grid-cols-1 md:grid-cols-3 gap-3 md:bg-transparent p-3 bg-teal-10">
           {sounds.map((group) => {
             const label = group.message;
 
