@@ -22,7 +22,7 @@ const SoundButton: FC<{
   return (
     <>
       <button
-        className={`relative bg-white-100 shadow-grey-8 rounded-3xl py-1 px-4 h-[48px]`}
+        className={`relative bg-white-100 shadow-grey-8 rounded-3xl py-1 px-4 h-[48px] transition transform ease-out active:scale-110`}
         onClick={() => {
           setIsPlaying(true);
         }}
