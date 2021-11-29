@@ -14,6 +14,7 @@ const SoundButton: FC<{
   image?: 'niki';
 }> = ({ children, soundName, label, image }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+
   const [, setIsLoading] = useState(false);
 
   const resolvedImg = image ? IMAGE_MAP[image] : undefined;
@@ -21,20 +22,25 @@ const SoundButton: FC<{
   return (
     <>
       <button
-        className={`bg-white-100 shadow-grey-8 rounded-3xl p-1 h-[48px] ${
-          isPlaying ? 'animate-spin' : ''
-        }`}
+        className={`relative bg-white-100 shadow-grey-8 rounded-3xl py-1 px-4 h-[48px]`}
         onClick={() => {
           setIsPlaying(true);
         }}
       >
+        <div
+          className={`text-2xl absolute top-2 left-3 ${
+            isPlaying ? 'animate-spin' : ''
+          }`}
+        >
+          💿
+        </div>
         <div className="uppercase text-xs h-[15px]">
           {resolvedImg ? (
             <img className="inline-block h-full" src={resolvedImg} />
           ) : null}
           {label}
         </div>
-        <div>{children}</div>
+        <div className="font-bold truncate">{children}</div>
       </button>
       <Sound
         url={soundName}
