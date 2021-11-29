@@ -29,7 +29,7 @@ const SoundButton: FC<{
       >
         <div
           className={`text-2xl absolute top-2 left-3 ${
-            isPlaying ? 'animate-spin' : ''
+            isPlaying ? 'animate-spin' : 'hidden'
           }`}
         >
           💿
