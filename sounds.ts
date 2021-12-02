@@ -47,7 +47,7 @@ const sounds = [
   },
 
   {
-    message: 'TourRadar random noises',
+    message: 'Random noises',
     files: sort([
       {
         name: 'Dog',
