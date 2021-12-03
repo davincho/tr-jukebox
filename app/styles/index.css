@@ -776,12 +776,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -790,115 +784,14 @@ video {
   transition-duration: 150ms;
 }
 
-.delay-75 {
-  transition-delay: 75ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.active\:scale-50:active {
-  --tw-scale-x: .5;
-  --tw-scale-y: .5;
-  transform: var(--tw-transform);
-}
-
-.active\:scale-125:active {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
-  transform: var(--tw-transform);
 }
 
 .active\:scale-110:active {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: var(--tw-transform);
-}
-
-.active\:scale-105:active {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: var(--tw-transform);
-}
-
-@-webkit-keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.active\:animate-ping:active {
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@-webkit-keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.active\:animate-bounce:active {
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
-}
-
-.active\:bg-red-40:active {
-  --tw-bg-opacity: 1;
-  background-color: rgba(244, 144, 144, var(--tw-bg-opacity));
-}
-
-.active\:transition-opacity:active {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.active\:transition:active {
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.active\:ease-in-out:active {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 768px) {
@@ -924,6 +817,20 @@ video {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:overflow-auto {
+    overflow: auto;
+  }
+
+  .md\:overscroll-auto {
+    -ms-scroll-chaining: chained;
+        overscroll-behavior: auto;
+  }
+
+  .md\:overscroll-none {
+    -ms-scroll-chaining: none;
+        overscroll-behavior: none;
   }
 
   .md\:bg-transparent {

@@ -15,7 +15,7 @@ const Index = () => {
     <div className="h-screen w-screen flex flex-col">
       <JukeBox />
 
-      <div className="md:absolute top-[162px] md:left-9 overflow-scroll">
+      <div className="md:absolute top-[162px] md:left-9 overflow-scroll md:overflow-auto">
         <h1 className="hidden md:block text-5xl mb-7 font-bold">
           TourRadar Jukebox
         </h1>
