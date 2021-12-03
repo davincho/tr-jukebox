@@ -1,12 +1,9 @@
-interface File {
-  name: string;
-  file: string;
-}
+import type { File, Sounds } from './types';
 
 const sort = (input: File[]) =>
   input.sort((a, b) => (a.name < b.name ? -1 : 1));
 
-const sounds = [
+const sounds: Sounds[] = [
   {
     message: 'NEW sounds',
     files: sort([

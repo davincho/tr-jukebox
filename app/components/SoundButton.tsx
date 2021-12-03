@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 
 import Sound from 'react-sound';
 
+import { ImageType } from './../../types.d';
 import niki from './niki.png';
 
 const IMAGE_MAP = {
@@ -11,7 +12,7 @@ const IMAGE_MAP = {
 const SoundButton: FC<{
   soundName: string;
   label: string;
-  image?: 'niki';
+  image?: ImageType;
 }> = ({ children, soundName, label, image }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
