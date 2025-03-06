@@ -1,19 +1,25 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 
 import Sound from 'react-sound';
 
-import { ImageType } from './../../types.d';
+import type { ImageType } from './../../types.d';
 import niki from './niki.png';
 
 const IMAGE_MAP = {
   niki
 };
 
-const SoundButton: FC<{
+const SoundButton = ({
+  children,
+  soundName,
+  label,
+  image
+}: {
   soundName: string;
   label: string;
   image?: ImageType;
-}> = ({ children, soundName, label, image }) => {
+  children: string;
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [, setIsLoading] = useState(false);
@@ -23,7 +29,7 @@ const SoundButton: FC<{
   return (
     <>
       <button
-        className={`relative bg-white-100 shadow-grey-8 rounded-3xl py-1 px-4 h-[48px] transition transform ease-out active:scale-110`}
+        className={`relative bg-white shadow-lg rounded-3xl py-1 px-4 h-[48px] transition transform ease-out active:scale-110 cursor-pointer`}
         onClick={() => {
           setIsPlaying(true);
         }}
@@ -43,18 +49,20 @@ const SoundButton: FC<{
         </div>
         <div className="font-bold truncate">{children}</div>
       </button>
-      <Sound
-        url={soundName}
-        onLoading={() => setIsLoading(true)}
-        onLoad={() => setIsLoading(false)}
-        onStop={() => setIsPlaying(false)}
-        onError={() => setIsPlaying(false)}
-        onFinishedPlaying={() => {
-          setIsPlaying(false);
-          setIsLoading(false);
-        }}
-        playStatus={isPlaying ? 'PLAYING' : 'STOPPED'}
-      />
+      {typeof window !== 'undefined' && (
+        <Sound
+          url={soundName}
+          onLoading={() => setIsLoading(true)}
+          onLoad={() => setIsLoading(false)}
+          onStop={() => setIsPlaying(false)}
+          onError={() => setIsPlaying(false)}
+          onFinishedPlaying={() => {
+            setIsPlaying(false);
+            setIsLoading(false);
+          }}
+          playStatus={isPlaying ? 'PLAYING' : 'STOPPED'}
+        />
+      )}
     </>
   );
 };

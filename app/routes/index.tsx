@@ -1,10 +1,8 @@
-import type { HeadersFunction } from 'remix';
-
 import sounds from '../../sounds';
 import JukeBox from '../components/JukeBox';
 import SoundButton from '../components/SoundButton';
 
-export const headers: HeadersFunction = () => {
+export const headers = () => {
   return {
     'Cache-Control': 's-maxage=1, stale-while-revalidate=59'
   };
