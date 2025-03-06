@@ -8,6 +8,15 @@ const sounds: Sounds[] = [
     message: 'NEW sounds',
     files: sort([
       {
+        name: 'Maahlzeeeit',
+        file: './sounds/maaaaahhlzeit.mp3'
+      }
+    ])
+  },
+  {
+    message: 'TR legacy',
+    files: sort([
+      {
         name: 'Ai jai jaiii',
         file: './sounds/ai_jai_jai.mp3'
       },
