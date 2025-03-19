@@ -10,6 +10,10 @@ const sounds: Sounds[] = [
       {
         name: 'Maahlzeeeit',
         file: './sounds/maaaaahhlzeit.mp3'
+      },
+      {
+        name: 'Wiederschaaaun',
+        file: './sounds/wiederschaaauun.mp3'
       }
     ])
   },
